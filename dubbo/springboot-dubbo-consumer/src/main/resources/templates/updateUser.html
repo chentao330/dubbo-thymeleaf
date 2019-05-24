@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户</title>
+    <script th:src="@{/js/bootstrap.min.js}" ></script>
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+
+<form th:action="@{/updateUser}" th:method="post"  role="form">
+
+    <table class="table" >
+        <caption>修改用户</caption>
+        <tbody>
+        <tr>
+            <th style="text-align: center">昵称</th>
+            <td><input type="text" class="form-control" name="nick" th:value="${user.nick}"  placeholder="请输入昵称"></td>
+        </tr>
+        <tr>
+            <th style="text-align: center">地址</th>
+            <td><input type="text" class="form-control" name="address" th:value="${user.address}" placeholder="请输入地址"></td>
+        </tr>
+        <tr>
+            <th style="text-align: center">电话</th>
+            <td><input type="text" class="form-control" name="phone" th:value="${user.phone}" placeholder="请输入手机号"></td>
+        </tr>
+        <tr>
+            <th style="text-align: center">邮箱</th>
+            <td><input type="text" class="form-control" name="email" th:value="${user.email}" placeholder="请输入邮箱"></td>
+        </tr>
+        <tr>
+            <td colspan="2"style="text-align: center">
+                <input type="submit" th:value="修改"  class="btn btn-default">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</form>
+
+</body>
+</html>
